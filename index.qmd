@@ -120,7 +120,7 @@ top20_table <- cookies %>%
   arrange(desc(recipe_count)) %>%
   
   # Select only the top 20 most common ingredients
-  slice_head(n = 20)
+  slice_head(n = 23)
 
 # Display the final table
 top20_table
@@ -129,6 +129,7 @@ top20_table
 
 
 ```
+The three ingredients that show up in nine recipes are nuts, dark chocolate chip and white chocolate chip. I am so sorry that I set  slice_head(n = 20), I only saw one result before. 
 ```{python}
 import pandas as pd
 # Import pandas for data manipulation
