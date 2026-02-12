@@ -58,9 +58,9 @@ Install both packages, and read the package documentation ([R](https://cran.r-pr
 
 ```{r}
 # install package 
-install.packages("skimr")
-install.packages("readr") # read data 
-install.packages("dplyr") # glimpse 
+# install.packages("skimr")
+# install.packages("readr") # read data 
+# install.packages("dplyr") # glimpse 
 library(skimr)
 library(readr)
 library(dplyr)
@@ -91,7 +91,7 @@ skim(cookies_data[["Quantity"]])
 
 [Part 2] Write 1-2 sentences about what you can tell from each summary display you generate. Did you discover anything new about the data?
 
-From the summary, I can see that the Quantity column has no missing values and most values are small. The mean is about 2.23, which shows that most cookie ingredients are used in relatively small amounts.
+From the summary, I can see that the Quantity column has no missing values. The mean is about 2.23, and most values are relatively low. However, we cannot conclude that ingredients are used in small amounts, because different ingredients may use different units.
 
 ### Generating Tables
 
@@ -124,6 +124,8 @@ top20_table <- cookies %>%
 
 # Display the final table
 top20_table
+
+
 
 
 ```
@@ -194,6 +196,7 @@ rare_str
 
 
 
+
 ```
 
 ```{python}
@@ -250,4 +253,4 @@ ggplot(top20_table, aes(
 ```
 
 [Part 2] Write 2-3 sentences about what you can learn from that plot and what directions you might want to investigate from here.
-From this plot, I can see that ingredients like eggs, vanilla, and flour appear in the largest number of recipes. This suggests that these ingredients are very common and are basic components in cookie recipes. In the future, it would be interesting to explore how ingredient usage differs across different types of cookies.
+From this plot, I can see that ingredients like egg, vanilla, and all purpose flour appear in the largest number of recipes. In addition, dark chocolate chip appears in 9 recipes, which suggests it is also relatively common. This shows that different types of chocolate chips are frequently used in cookie recipes. In the future, it would be interesting to explore how ingredient combinations differ across different types of cookies.
